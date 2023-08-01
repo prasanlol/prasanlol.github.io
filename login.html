@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hello my love</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            background-color: #121212;
+            color: #fff;
+        }
+
+        #login-container {
+            max-width: 300px;
+            margin: 100px auto;
+            background-color: #1e1e1e;
+            border: 1px solid #444;
+            padding: 20px;
+        }
+
+        #login-container h1 {
+            color: #fff;
+        }
+
+        label {
+            color: #fff;
+        }
+
+        input {
+            background-color: #333;
+            color: #fff;
+            border: 1px solid #444;
+            padding: 8px;
+            margin-bottom: 10px;
+        }
+
+        button {
+            background-color: #555;
+            color: #fff;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+        }
+
+
+        @keyframes heartFall {
+            0% { transform: translateY(-100%); opacity: 0; }
+            100% { transform: translateY(100vh); opacity: 1; }
+        }
+
+        .heart {
+            position: absolute;
+            font-size: 20px;
+            animation: heartFall 3s linear;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div id="login-container">
+        <h1>Enter Name</h1>
+        <label for="name">Name:</label>
+        <input type="text" id="name" required>
+        <button onclick="login()">Login</button>
+        <p id="result"></p>
+    </div>
+
+
+
+    <script>
+
+
+        function createFallingHeart() {
+            const heart = document.createElement("div");
+            heart.className = "heart";
+            heart.innerHTML = "❤️"; // Heart emoji
+
+            heart.style.top = "0";
+            heart.style.pointerEvents = "none"; // Prevents the hearts from blocking clicks on other elements
+
+            heart.style.left = Math.random() * 100 + "vw";
+            heart.style.animationDuration = Math.random() * 2 + 1 + "s";
+            heart.style.animationDelay = Math.random() * 3 + "s"; // Randomize the animation start time
+            document.body.appendChild(heart);
+        }
+
+
+        function login() {
+            const nameInput = document.getElementById("name");
+            const resultText = document.getElementById("result");
+            const name = nameInput.value.trim();
+
+            if (name.toLowerCase() === "pestel") {
+                resultText.innerText = `I love you, ${name}! Welcome to the site.`;
+
+                window.location.href = "menu.html";
+            }else if (name.toLowerCase() === "") {
+                resultText.innerText = `Enter name please`;
+            } else {
+                resultText.innerText = "Get tf outta my site";
+            }
+        }
+    </script>
+</body>
+</html>

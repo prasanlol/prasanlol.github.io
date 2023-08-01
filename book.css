@@ -1,0 +1,146 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: sans-serif;
+    background-color: rgb(15, 15, 15);
+}
+
+
+#b1 {
+    background-image: url("https://media.discordapp.net/attachments/1130714626649243719/1135801429710340177/ffe66830-2b20-40a1-887b-e6fbe4298c82.png?width=434&height=588");
+}
+
+#f2 {
+    background-image: url("https://media.discordapp.net/attachments/1130714626649243719/1135803400311799879/b4258b54-7741-4aa0-b3c6-4f7474ef970b.png?width=442&height=589");
+}
+
+#b2 {
+    background-image: url("https://media.discordapp.net/attachments/1130714626649243719/1135803610693894194/0c9f3ba3-e42c-48ea-8f82-ea11c2475b19.png?width=441&height=589");
+}
+
+#f3 {
+    background-image: url("https://media.discordapp.net/attachments/1130714626649243719/1135803635394154506/ea035cb4-6e77-4856-ad73-31df6d1662e0.png?width=271&height=589");
+}
+
+#b3 {
+    background-image: url("https://media.discordapp.net/attachments/1130714626649243719/1135803656948686900/8055a4ea-561c-4257-a9a7-ca9f70d662a7.png?width=787&height=589");
+}
+
+
+
+.front-content,
+.back-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+}
+
+
+
+
+/* Book */
+.book {
+    position: relative;
+    width: 350px;
+    height: 500px;
+    transition: transform 0.5s;
+}
+
+.paper {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    perspective: 1500px;
+
+}
+
+.front,
+.back {
+    background-color: white;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transform-origin: left;
+    transition: transform 0.5s;
+}
+
+.front {
+    z-index: 1;
+    backface-visibility: hidden;
+    border-left: 3px solid rgb(23, 24, 24);
+}
+
+.back {
+    z-index: 0;
+}
+
+.front-content,
+.back-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.back-content {
+    transform: rotateY(180deg)
+}
+
+/* Paper flip effect */
+.flipped .front,
+.flipped .back {
+    transform: rotateY(-180deg);
+}
+
+/* Controller Buttons */
+button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    margin: 10px;
+    transition: transform 0.5s;
+}
+
+button:focus {
+    outline: none;
+}
+
+button:hover i {
+    color: #636363;
+}
+
+i {
+    font-size: 50px;
+    color: gray;
+}
+
+/* Paper stack order */
+#p1 {
+    z-index: 3;
+}
+
+#p2 {
+    z-index: 2;
+}
+
+#p3 {
+    z-index: 1;
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu</title>
+  <link rel="stylesheet" href="menu.css">
+</head>
+<body>
+  <div class="container">
+    <div class="menu">
+      <button onclick="Paragraph()" class="menu-button">
+        <img src="book.png" alt="Paragraph">
+      </button>
+      <div class="heart">
+        ❤️
+      </div>
+      <button onclick="book()" class="menu-button">
+        <img src="camera.png" alt="Photo Book">
+      </button>
+    </div>
+  </div>
+  <script>
+    const darkModeCheckbox = document.getElementById('dark-mode-checkbox');
+    const body = document.body;
+
+
+    function book() {
+        window.location.href = "book.html";
+    }
+
+    function Paragraph(){
+        window.location.href = "para.html";
+    }
+
+
+    darkModeCheckbox.addEventListener('change', () => {
+      body.classList.toggle('dark-mode', darkModeCheckbox.checked);
+    });
+  </script>
+</body>
+</html>
