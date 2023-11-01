@@ -1,228 +1,42 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="dark" lang="en">
 
 <head>
-  <link href="ajax/libs/font-awesome/6.2.0/css/all.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
-  <title>@prasan - prasan.lol</title>
-  <meta charset="UTF-8" />
-  <meta property="og:site_name" content="slain.lol">
-  <meta name="theme-color" content="#2f3136">
-  <meta name="keywords" content="slain.lol, biolinks, slain, counter-strike, csgo, hvh" />
-  <meta name="author" content="Jinxy" />
-  <meta property="og:type" content="site" />
-  <meta property="og:title" content="slain" />
-  <meta property="og:url" content="https://slain.lol/" />
-  <meta itemprop="name" content="slain" />
-
-  <meta itemprop="description" content="visit @a on slain.lol - exclusive biolinks" />
-  <meta name="description" content="visit @a on slain.lol - exclusive biolinks" />
-  <meta property="og:description" content="visit @a on slain.lol - exclusive biolinks" />
-  <meta property="og:image" content="https://i.imgur.com/hzQAfED.png">
-
-  <link rel="icon" href="assets/icon.png">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
-
-
-
-  <style>
-    body {
-      background-color: #000000;
-      background-image: url(attachments/270957.png);
-      background-position: center center;
-      background-size: cover;
-      display: flex;
-      /* add display flex */
-      align-items: center;
-      /* center content vertically */
-      justify-content: center;
-      /* center content horizontally */
-      height: 100vh;
-      /* set height to full viewport height */
-    }
-
-    /* Styles for the box container */
-    .box {
-      background-color: #1c1c1c;
-      border: 1px solid #333333;
-      border-radius: 15px;
-      padding: 20px;
-      max-width: 500px;
-      margin: 0 auto;
-      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-      height: 500px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
-
-    /* Styles for the container */
-    .container {
-      text-align: center;
-    }
-
-    /* Styles for the profile picture */
-    .pfp-image {
-      border-radius: 50%;
-      width: 150px;
-      height: 150px;
-      object-fit: cover;
-      margin-bottom: 20px;
-    }
-
-    /* Styles for the username */
-    .username {
-      font-family: 'Strange Piece';
-      font-size: 30px;
-      color: #ffffff;
-      margin-bottom: 10px;
-    }
-
-    /* Styles for the bio text */
-    .bio-text {
-      color: #ffffff;
-      margin-bottom: 5px;
-    }
-
-    /* Styles for the social icons */
-    .social-icons {
-      font-size: 25px;
-      color: #ffffff;
-      margin-right: 10px;
-    }
-
-    /* Styles for the tooltip */
-    .tooltip {
-      position: relative;
-      display: inline-block;
-    }
-
-    .button-container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-    }
-
-    /* Styles for the tooltip text */
-    .tooltiptext {
-      visibility: hidden;
-      width: 120px;
-      text-align: center;
-      background-color: black;
-      color: #fff;
-      border-radius: 6px;
-      padding: 5px 0;
-      position: absolute;
-      z-index: 1;
-      bottom: 150%;
-      left: 50%;
-      margin-left: -60px;
-      opacity: 0;
-      transition: opacity 0.3s;
-    }
-
-    /* Styles
-      .tooltiptext::after {
-        content: "";
-        position: absolute;
-        top: 100%;
-        left: 50%;
-        margin-left: -5px;
-        border-width: 5px;
-        border-style: solid;
-        border-color: black transparent transparent transparent;
-    }
-    /* Styles to show the tooltip on hover */
-    .tooltip:hover .tooltiptext {
-      visibility: visible;
-      opacity: 1;
-    }
-
-    /* Styles for the sparkle effect on the username */
-
-    .btn-link {
-      background-color: #5765f2;
-      color: white;
-    }
-
-    .social-icons {
-      font-family: 'Font Awesome 5 Free';
-      font-size: 25px;
-      color: #ffffff;
-    }
-
-    /* Keyframes for the sparkle effect */
-    @keyframes sparkle {
-      0% {
-        color: #ffffff;
-      }
-
-      50% {
-        color: #ff00ff;
-      }
-
-      100% {
-        color: #ffffff;
-      }
-    }
-
-    .badges{
-    animation: up 2s;
-}
-
-.badge{
-    cursor: pointer;
-    margin-top: 5px;
-    filter: drop-shadow(0px 3px 5px rgba(0, 0, 0, 0.75));
-    width: 20px;
-    height: 20px;
-}
-
-    .username {
-      font-family: 'Strange Piece';
-      color: #ffffff;
-      /* set a specific color for the text */
-    }
-
-    /* Styles for the Spotify iframe */
-    .spotifys {
-      margin-top: 20px;
-    }
-
-    .bio-text{
-    font-size: 16px;
-    animation: up 2s;
-    font-weight: 500;
-    color: #f1f1f1bd;
-}
-  </style>
+    <meta charset="utf-8">
+    <title>Prasan.lol</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/bundle.min.0be7be375ad7415d231865c17c721bc94b6b79d46c0567188cb1df740cdcd4fd.css">
+    <script src="js/theme-switcher.min.js"></script>
 </head>
 
 <body>
-  <div class="box">
-    <div class="center">
-      <div class="container">
-        <img class="pfp-image"
-          src="https://i.pinimg.com/1200x/c7/c4/1c/c7c41c0a3af1405e7850045f8d1c02c1.jpg"
-          alt="pfp">
-          <p class="username">
-            <span class="sparkle">Prasan</span>
+    <div class="container">
+        <div class="header">
+            <ul>
+                <li class="home"><a href="#">Prasan.lol</a></li>
+                <li onclick="switchTheme()">theme</li>
+                <li><a href="/about/">about</a></li>
+                <li><a href="/services/">services</a></li>
+            </ul>
+        </div>
 
-          </p>
-<p class="bio-text">@prasan</p>
-        <hr class="mt-4 w-full border-t-2 border-[#323334] opacity-70">
+        <div class="content">
+            <h1><u>Tools</u></h1>
+            <h2 id="deobfuscation-1">Edpuzzle:</h2>
+            <ul>
+                <li>1. Drag this button into your bookmarks bar</li>
+                <li>2. Click the bookmark in edpuzzle and it'll open gui</li>
+                <h2 id="dss"> </h2>
 
-
-        
-        <iframe scrolling="no" class="spotifys" style="border-radius:12px"
-          src="https://open.spotify.com/embed/track/3SawmGBjjq8EOYZJV11cJm?utm_source=generator&theme=0" width="97%"
-          height="80" frameBorder="0" allowfullscreen=""
-          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-      </div>
+                <a href='javascript: fetch("https://raw.githubusercontent.com/Xoapop/edpuzzle-solver/main/main.js").then(r => r.text()).then(r => eval(r))'>
+                    <button style="background-color: #333; color: #ebdbb2; border: none; padding: 10px 20px; cursor: pointer; margin-right: 10px;">
+                        Edpuzzle Solver
+                    </button>
+                  </a>
+            </ul>
+        </div>
     </div>
-  </div>
 </body>
 
 </html>
